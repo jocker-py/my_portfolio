@@ -1,0 +1,42 @@
+.container {
+    background-color: aquamarine;
+    padding-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 0 0 40px 0;
+    border: 1px solid black;
+}
+
+.item {
+    background-color: gray;
+    width: 60px;
+    height: 60px;
+}
+
+.copyright {
+    font-size: 1rem;
+}
+
+@media (max-width: 550px){
+    .list {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 80px;
+        height: 80px;
+    }
+}

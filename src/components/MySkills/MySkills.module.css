@@ -1,0 +1,34 @@
+.container {
+    background-color: lightgreen;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.title {
+    background-color: gray;
+    margin: 0 auto 50px;
+    font-size: 2.4rem;
+}
+
+@media (max-width: 560px) {
+    .list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

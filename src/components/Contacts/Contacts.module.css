@@ -1,0 +1,31 @@
+.container {
+    background: lightpink;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 0 30px 0;
+}
+
+.name, .phone, .textarea {
+    padding: 2px 5px;
+    font-size: 1.3rem;
+    font-family: inherit;
+}
+
+.textarea {
+    resize: vertical;
+}

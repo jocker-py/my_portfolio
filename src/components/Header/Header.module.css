@@ -1,0 +1,35 @@
+.container {
+    background-color: #9090e3;
+    padding: 20px 100px;
+}
+
+.header {
+    margin-left: auto;
+}
+
+.nav {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    border: 1px solid black;
+}
+
+.nav a {
+    color: #ffffff;
+}
+
+@media (max-width: 550px){
+    .container {
+        padding: 5% 2%;
+    }
+    .header {
+        margin: 0 auto;
+    }
+    .nav {
+        justify-content: center;
+    }
+}
