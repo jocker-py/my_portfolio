@@ -5,14 +5,16 @@ import c from '../common/styles/Container.module.css';
 
 const MySkills = () => {
   return (
-    <section className={c.container + ' ' + s.container} id="skills">
-        <div className={s.skills}>
-          <h2 className={c.title}>Мои скиллы</h2>
-          <ul className={s.list}>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-          </ul>
+    <section className={s.skills} id="skills">
+        <div className={c.container}>
+          <div className={s.wrapper}>
+            <h2 className={c.title}>Мои скиллы</h2>
+            <ul className={s.list}>
+              <Skill/>
+              <Skill/>
+              <Skill/>
+            </ul>
+          </div>
         </div>
     </section>
   );
