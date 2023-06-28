@@ -4,12 +4,12 @@ import s from "./Hire.module.css";
 
 const Hire = () => {
   return (
-    <div className={c.container + ' ' + s.container}>
+    <section className={c.container + ' ' + s.container}>
       <div className={s.hire}>
         <h2 className={c.title}>Рассматриваю вариант удаленной работы</h2>
         <button className={c.button}>Нанять меня</button>
       </div>
-    </div>
+    </section>
   );
 };
 

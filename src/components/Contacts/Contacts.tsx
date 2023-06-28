@@ -4,7 +4,7 @@ import c from "../common/styles/Container.module.css";
 
 const Contacts = () => {
   return (
-    <div className={c.container + " " + s.container} id="contacts">
+    <section className={c.container + " " + s.container} id="contacts">
       <div className={s.contacts}>
         <h2 className={c.title}>Контакты</h2>
         <form action="#" className={s.form}>
@@ -15,7 +15,7 @@ const Contacts = () => {
         <button className={c.button}>Оправить</button>
       </div>
 
-    </div>
+    </section>
   );
 };
 

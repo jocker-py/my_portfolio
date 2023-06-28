@@ -4,7 +4,7 @@ import s from "./Main.module.css";
 
 const Main = () => {
   return (
-      <div className={c.container + ' ' + s.container} id="main">
+      <section className={c.container + ' ' + s.container} id="main">
         <div className={s.main}>
           <div className={s.description}>
             <span>Hi There</span>
@@ -13,7 +13,7 @@ const Main = () => {
           </div>
           <div className={s.photo}>Фото</div>
         </div>
-      </div>
+      </section>
   );
 };
 

@@ -5,7 +5,7 @@ import Project from "./Project/Project";
 
 const MyProjects = () => {
   return (
-    <div className={c.container + ' ' + s.container} id="projects">
+    <section className={c.container + ' ' + s.container} id="projects">
       <div className={s.projects}>
          <h2 className={c.title}>Мои работы</h2>
         <ul className={s.list}>
@@ -13,7 +13,7 @@ const MyProjects = () => {
           <Project/>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

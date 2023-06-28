@@ -5,7 +5,7 @@ import c from '../common/styles/Container.module.css';
 
 const MySkills = () => {
   return (
-    <div className={c.container + ' ' + s.container} id="skills">
+    <section className={c.container + ' ' + s.container} id="skills">
         <div className={s.skills}>
           <h2 className={c.title}>Мои скиллы</h2>
           <ul className={s.list}>
@@ -14,7 +14,7 @@ const MySkills = () => {
             <Skill/>
           </ul>
         </div>
-    </div>
+    </section>
   );
 };
 
