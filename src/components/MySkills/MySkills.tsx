@@ -1,21 +1,23 @@
 import React from "react";
+import s from "./MySkills.module.css";
 import Skill from "./Skill/Skill";
-import s from './MySkills.module.css';
-import c from '../common/styles/Container.module.css';
+import Container from "../common/Container/Conatiner";
+import Title from "../common/Title/Title";
 
 const MySkills = () => {
   return (
     <section className={s.skills} id="skills">
-        <div className={c.container}>
-          <div className={s.wrapper}>
-            <h2 className={c.title}>Мои скиллы</h2>
-            <ul className={s.list}>
-              <Skill/>
-              <Skill/>
-              <Skill/>
-            </ul>
-          </div>
+      <Container>
+        <div className={s.wrapper}>
+          <Title>Мои скиллы</Title>
+          <ul className={s.list}>
+            <Skill/>
+            <Skill/>
+            <Skill/>
+          </ul>
         </div>
+      </Container>
+
     </section>
   );
 };

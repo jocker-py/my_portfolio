@@ -1,14 +1,15 @@
 import React from "react";
-import c from "../common/styles/Container.module.css";
 import s from "./Footer.module.css";
+import Container from "../common/Container/Conatiner";
+import Title from "../common/Title/Title";
 
 
 const Footer = () => {
   return (
     <footer className={s.footer}>
-      <div className={c.container + ' ' + s.container}>
+      <Container className={s.container}>
         <div className={s.wrapper}>
-          <h2 className={c.title}>Владислав Беляев</h2>
+          <Title>Владислав Беляев</Title>
           <ul className={s.list}>
             <li className={s.item}>github</li>
             <li className={s.item}>telegram</li>
@@ -17,7 +18,7 @@ const Footer = () => {
           </ul>
           <h5 className={s.copyright}>© 2019 Все права защищены</h5>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

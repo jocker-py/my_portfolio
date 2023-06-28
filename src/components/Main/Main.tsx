@@ -1,11 +1,11 @@
 import React from "react";
 import s from "./Main.module.css";
-import c from '../common/styles/Container.module.css';
+import Container from "../common/Container/Conatiner";
 
 const Main = () => {
   return (
       <section className={s.main} id="main">
-        <div className={c.container}>
+        <Container>
           <div className={s.wrapper}>
             <div className={s.description}>
               <span>Hi There</span>
@@ -14,8 +14,7 @@ const Main = () => {
             </div>
             <div className={s.photo}>Фото</div>
           </div>
-        </div>
-
+        </Container>
       </section>
   );
 };

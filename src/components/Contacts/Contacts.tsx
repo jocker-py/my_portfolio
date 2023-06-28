@@ -1,23 +1,26 @@
 import React from "react";
 import s from "./Contacts.module.css";
-import c from "../common/styles/Container.module.css";
+import Container from "../common/Container/Conatiner";
+import Title from "../common/Title/Title";
+import Button from "../common/Button/Button";
 
 const Contacts = () => {
   return (
     <section className={s.contacts}>
-      <div className={c.container}>
+      <Container>
         <div className={s.wrapper}>
-          <h2 className={c.title}>Контакты</h2>
+          <Title>Контакты</Title>
           <form action="#" className={s.form}>
             <input type="text" className={s.name} placeholder="Введите Ваше Имя"/>
             <input type="phone" className={s.phone} placeholder="Введите Ваш номер телефона"/>
-            <textarea  className={s.textarea} rows={8} placeholder="Введите сообщение" />
+            <textarea className={s.textarea} rows={8} placeholder="Введите сообщение"/>
           </form>
-          <button className={c.button}>Оправить</button>
+          <Button>Отправить</Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
+
 
 export default Contacts;

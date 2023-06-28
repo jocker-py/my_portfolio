@@ -1,13 +1,13 @@
 import React from "react";
 import s from './Project.module.css';
-import c from '../../common/styles/Container.module.css';
+import Button from "../../common/Button/Button";
 
 const Project = () => {
   return (
     <div className={s.project}>
       <div className={s.photo}>
         Картинка
-        <button className={c.button + ' ' + s.button}>Смотреть</button>
+        <Button className={s.button}>Смотреть</Button>
       </div>
       <div className={s.info}>
         <h4 className={s.title}>Название проекта</h4>

@@ -1,16 +1,18 @@
 import React from "react";
-import c from "../common/styles/Container.module.css";
 import s from "./Hire.module.css";
+import Container from "../common/Container/Conatiner";
+import Title from "../common/Title/Title";
+import Button from "../common/Button/Button";
 
 const Hire = () => {
   return (
     <section className={s.hire}>
-        <div className={c.container}>
-          <div className={s.wrapper}>
-            <h2 className={c.title}>Рассматриваю вариант удаленной работы</h2>
-            <button className={c.button}>Нанять меня</button>
-          </div>
+      <Container>
+        <div className={s.wrapper}>
+          <Title>Рассматриваю вариант удаленной работы</Title>
+          <Button>Нанять меня</Button>
         </div>
+      </Container>
     </section>
   );
 };
