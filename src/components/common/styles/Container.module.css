@@ -1,9 +1,7 @@
 .container {
-    width: 100%;
-    padding: 10%;
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
+    max-width: 1440px;
+    padding: 5% 10%;
+    margin: 0 auto;
 }
 
 .title {

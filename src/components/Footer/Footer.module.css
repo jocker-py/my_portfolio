@@ -1,9 +1,13 @@
-.container {
+.footer {
     background-color: aquamarine;
     padding-bottom: 10px;
 }
 
-.footer {
+.container {
+    padding-bottom: 2%;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +34,7 @@
     font-size: 1rem;
 }
 
-@media (max-width: 550px){
+@media (max-width: 400px){
     .list {
         flex-direction: column;
     }
