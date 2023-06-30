@@ -1,23 +1,18 @@
 import React from 'react';
+import s from './App.module.scss';
+import Router from "./components/Router/Router";
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import MySkills from "./components/MySkills/MySkills";
-import MyProjects from "./components/MyProjects/MyProjects";
-import Hire from "./components/Hire/Hire";
-import Contacts from "./components/Contacts/Contacts";
-import Footer from "./components/Footer/Footer";
+import {BrowserRouter} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Main/>
-      <MySkills/>
-      <MyProjects/>
-      <Hire/>
-      <Contacts/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className={s.app}>
+        <Header/>
+        <Router/>
+      </div>
+    </BrowserRouter>
   );
 }
 
