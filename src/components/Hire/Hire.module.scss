@@ -1,13 +1,13 @@
+@import './src/styles/mixins.scss';
+
 .hire {
     background-color: lemonchiffon;
 }
 
 .wrapper {
     width: 100%;
+    @include flex(column);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     border: 1px solid black;
 }

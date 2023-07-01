@@ -1,0 +1,24 @@
+@import './src/styles/mixins.scss';
+
+.projects {
+    background-color: lavender;
+}
+
+.wrapper {
+    @include flex(column, stretch, stretch);
+    width: 100%;
+    border: 1px solid black;
+}
+
+.list {
+    @include flex($j: space-between);
+    gap: 40px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+@media (max-width: 560px) {
+    .list {
+        @include flex(column)
+    }
+}

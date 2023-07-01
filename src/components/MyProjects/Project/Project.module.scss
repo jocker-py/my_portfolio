@@ -1,9 +1,8 @@
+@import './src/styles/mixins.scss';
+
 .project {
+    @include flex(column);
     width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 1px solid black;
 }
 
