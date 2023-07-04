@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  padding: 80px 0;
+}
+
+.background, .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.background {
+  font-size: 110px;
+  letter-spacing: 10px;
+  line-height: .7;
+  font-weight: 800;
+  color: rgba(30,37,48,.07);
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 900;
+  margin: 0;
+  color: #666;
+  white-space: nowrap;
+}
+
+.subTitle {
+  color: rgba(255, 180, 0, 0.85);
+  margin-left: 10px;
+}
+
