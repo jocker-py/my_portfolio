@@ -1,21 +1,13 @@
 import React from "react";
-import s from "./MyProjects.module.css";
-import Project from "./Project/Project";
-import Container from "../common/Container/Conatiner";
-import Title from "../common/Title/Title";
+import s from "./MyProjects.module.scss";
+import HeadTitle from "../HeadTitle/HeadTitle";
 
 const MyProjects = () => {
   return (
-    <section className={s.projects} id="projects">
-      <Container>
-        <div className={s.wrapper}>
-          <Title>Мои работы</Title>
-          <ul className={s.list}>
-            <Project/>
-            <Project/>
-          </ul>
-        </div>
-      </Container>
+    <section className={s.container}>
+      <div className={s.wrapper}>
+        <HeadTitle background={"Works"} title={"My"} subtitle={'Portfolio'}/>
+      </div>
     </section>
   );
 };
