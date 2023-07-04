@@ -1,8 +1,7 @@
 export enum Endpoints {
-  Society = '/society',
-  Contact= '/contact',
-  Hire= '/hire',
-  Portfolio= '/portfolio',
-  About= '/about',
-  Home= '/',
+  Contact= '/my_portfolio/contact',
+  Hire= '/my_portfolio/hire',
+  Portfolio= '/my_portfolio/portfolio',
+  About= '/my_portfolio/about',
+  Home= '/my_portfolio/',
 }
