@@ -1,23 +1,20 @@
 import React from "react";
-import s from "./Contacts.module.css";
-import Container from "../common/Container/Conatiner";
-import Title from "../common/Title/Title";
+import s from "./Contacts.module.scss";
 import Button from "../common/Button/Button";
+import HeadTitle from "../HeadTitle/HeadTitle";
 
 const Contacts = () => {
   return (
-    <section className={s.contacts}>
-      <Container>
-        <div className={s.wrapper}>
-          <Title>Контакты</Title>
+    <section className={s.container}>
+      <div className={s.wrapper}>
+        <HeadTitle background={"Contacts"} title={"Get In"} subtitle={"Touch"}/>
           <form action="#" className={s.form}>
             <input type="text" className={s.name} placeholder="Введите Ваше Имя"/>
             <input type="phone" className={s.phone} placeholder="Введите Ваш номер телефона"/>
             <textarea className={s.textarea} rows={8} placeholder="Введите сообщение"/>
           </form>
           <Button>Отправить</Button>
-        </div>
-      </Container>
+      </div>
     </section>
   );
 };
