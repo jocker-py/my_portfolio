@@ -1,12 +1,16 @@
-import React from "react";
+import React, {FC} from "react";
 import s from './Skill.module.scss';
 
-const Skill = () => {
+type SkillPropsType = {
+  icon: string;
+  title: string;
+}
+
+const Skill: FC<SkillPropsType> = ({icon, title}) => {
   return (
     <li className={s.skill}>
-      <div className={s.logo}>logo</div>
-      <h4 className={s.title}>React</h4>
-      <p className={s.description}>Подробное описание навыка</p>
+      <div><img src={icon} alt={title}/></div>
+      <h4 className={s.title}>{title}</h4>
     </li>
   );
 };
