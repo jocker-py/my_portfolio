@@ -1,16 +1,18 @@
 .skill {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.icon {
+  width: 100px;
+  height: 100px;
 }
 
 .title {
-    font-size: 3.2rem;
+  font-size: 2.0rem;
 }
 
