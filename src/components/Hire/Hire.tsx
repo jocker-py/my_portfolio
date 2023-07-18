@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Hire.module.css";
+import s from "./Hire.module.scss";
 import Container from "../common/Container/Conatiner";
 import Title from "../common/Title/Title";
 import Button from "../common/Button/Button";

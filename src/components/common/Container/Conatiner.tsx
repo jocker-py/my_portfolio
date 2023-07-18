@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import s from "./Container.module.css";
+import s from "./Container.module.scss";
 
 type ContainerPropsType = {
   className?: string;
