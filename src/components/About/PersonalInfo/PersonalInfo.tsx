@@ -2,6 +2,16 @@ import React from "react";
 import s from "./PersonalInfo.module.scss";
 import Title from "../../common/Title/Title";
 
+import {saveAs} from "file-saver";
+import Button from "../../common/Button/Button";
+
+function handleDownloadPDF() {
+  const pdfPath = "https://export-download.canva.com/AW9kY/DAFjE6AW9kY/129/0-1272663795381854700.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20230717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230717T170012Z&X-Amz-Expires=69854&X-Amz-Signature=9a1ed50c9e867b7b113f06fa17c2a99686690ce3b4cfda92089f51cdf90e6683&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Black%2520White%2520Minimalist%2520CV%2520Resume.pdf&response-expires=Tue%2C%2018%20Jul%202023%2012%3A24%3A26%20GMT";
+  const pdfFileName = "Front_End_Belyaev.pdf";
+  saveAs(pdfPath, pdfFileName);
+
+}
+
 const PersonalInfo = () => {
   return (
     <article className={s.wrapper}>
@@ -18,9 +28,9 @@ const PersonalInfo = () => {
         <li className={s.item}>Email: <span className={s.details}>buladzislau@gmail.com</span></li>
 
       </ul>
-      <button className={s.file}>
-        <a href={"../../../assets/Belyaev_Front_End.pdf"} download>download CV</a>
-      </button>
+      <Button className={s.file} onClick={handleDownloadPDF}>
+        Download CV
+      </Button>
     </article>
   );
 };
