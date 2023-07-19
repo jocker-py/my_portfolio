@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./MySkills.module.scss";
-import Skill from "./Skill/Skill";
+import Skill, {SkillType} from "./Skill/Skill";
 import Title from "../../common/Title/Title";
 import react from "../../../assets/techs/react.svg";
 import ts from "../../../assets/techs/ts.svg";
@@ -26,43 +26,41 @@ import npm from "../../../assets/techs/npm.svg";
 import yarn from "../../../assets/techs/yarn.svg";
 import prettier from "../../../assets/techs/prettier.png";
 import axios from "../../../assets/techs/axios.svg";
+import List from "../../common/List/List";
+import {v1} from "uuid";
 
 
 const MySkills = () => {
-  const tech = [
-    {title: "React", icon: react},
-    {title: "JavaScript", icon: js},
-    {title: "TypeScript", icon: ts},
-    {title: "Redux", icon: redux},
-    {title: "GitHub", icon: github},
-    {title: "HTML", icon: html},
-    {title: "CSS", icon: css},
-    {title: "SCSS/SASS", icon: sass},
-    {title: "Figma", icon: figma},
-    {title: "Heroku", icon: heroku},
-    {title: "Axios", icon: axios},
-    {title: "Node.JS", icon: node},
-    {title: "Git", icon: git},
-    {title: "Storybook", icon: storybook},
-    {title: "Jest", icon: jest},
-    {title: "MaterialUI", icon: material},
-    {title: "Webpack", icon: webpack},
-    {title: "EsLint", icon: eslint},
-    {title: "Prettier", icon: prettier},
-    {title: "MarkDown", icon: markdown},
-    {title: "VSCode", icon: vscode},
-    {title: "Webstorm", icon: webstorm},
-    {title: "NPM", icon: npm},
-    {title: "Yarn", icon: yarn},
+  const techs: Array<SkillType> = [
+    {id: v1(), title: "React", icon: react},
+    {id: v1(), title: "JavaScript", icon: js},
+    {id: v1(), title: "TypeScript", icon: ts},
+    {id: v1(), title: "Redux", icon: redux},
+    {id: v1(), title: "GitHub", icon: github},
+    {id: v1(), title: "HTML", icon: html},
+    {id: v1(), title: "CSS", icon: css},
+    {id: v1(), title: "SCSS/SASS", icon: sass},
+    {id: v1(), title: "Figma", icon: figma},
+    {id: v1(), title: "Heroku", icon: heroku},
+    {id: v1(), title: "Axios", icon: axios},
+    {id: v1(), title: "Node.JS", icon: node},
+    {id: v1(), title: "Git", icon: git},
+    {id: v1(), title: "Storybook", icon: storybook},
+    {id: v1(), title: "Jest", icon: jest},
+    {id: v1(), title: "MaterialUI", icon: material},
+    {id: v1(), title: "Webpack", icon: webpack},
+    {id: v1(), title: "EsLint", icon: eslint},
+    {id: v1(), title: "Prettier", icon: prettier},
+    {id: v1(), title: "MarkDown", icon: markdown},
+    {id: v1(), title: "VSCode", icon: vscode},
+    {id: v1(), title: "Webstorm", icon: webstorm},
+    {id: v1(), title: "NPM", icon: npm},
+    {id: v1(), title: "Yarn", icon: yarn},
   ];
   return (
     <article className={s.wrapper}>
       <Title>My Skills</Title>
-      <ul className={s.list}>
-        {
-          tech.map((th, idx) => <Skill key={idx} {...th}/>)
-        }
-      </ul>
+      <List className={s.list} items={techs} renderItem={(tech) => <Skill {...tech}/>}/>
     </article>
   );
 };
