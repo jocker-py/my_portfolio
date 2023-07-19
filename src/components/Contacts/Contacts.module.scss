@@ -1,13 +1,15 @@
 @import './src/styles/mixins';
 
-.contacts {
-  background: lightpink;
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
 }
 
 .wrapper {
-  @include flex(column);
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  border: 1px solid black;
 }
 
 .form {
@@ -19,6 +21,7 @@
 }
 
 .name, .phone, .textarea {
+  width: 100%;
   padding: 2px 5px;
   font-size: 1.3rem;
   font-family: inherit;
