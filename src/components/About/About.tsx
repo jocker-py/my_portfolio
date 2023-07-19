@@ -4,6 +4,7 @@ import HeadTitle from "../HeadTitle/HeadTitle";
 import MySkills from "./MySkills/MySkills";
 import PersonalInfo from "./PersonalInfo/PersonalInfo";
 import Title from "../common/Title/Title";
+import Education from "./Education/Education";
 
 const About = () => {
   return (
@@ -15,7 +16,7 @@ const About = () => {
           <hr/>
           <Title>EXPERIENCE</Title>
           <hr/>
-          <Title>EDUCATION</Title>
+          <Education/>
           <hr/>
           <Title>CodeWars</Title>
     </section>
