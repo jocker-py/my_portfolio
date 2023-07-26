@@ -1,0 +1,64 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 0 30px 0;
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.fieldWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.errorMessage {
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+  transform: translate(-50%, 0);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: red;
+}
+
+.name, .email, .subject, .textarea {
+  position: relative;
+  width: 100%;
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 11px 26px;
+  font-size: 1.3rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: #666;
+  transition: all .3s;
+}
+
+.name::placeholder,
+.email::placeholder,
+.subject::placeholder,
+.textarea::placeholder {
+  text-transform: uppercase;
+}
+
+.name:focus,
+.email:focus,
+.subject:focus,
+.textarea:focus {
+  border: 1px solid #ffb400;
+}
+
+.textarea {
+  resize: vertical;
+}
+
