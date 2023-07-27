@@ -1,0 +1,34 @@
+@import './src/styles/mixins';
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contactsList {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.societiesList {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+
