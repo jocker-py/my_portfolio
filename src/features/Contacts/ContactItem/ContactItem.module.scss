@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.icon {
+  color: #ffb400;
+  width: 4rem;
+  height: 4rem;
+}
+
+.description {
+  color: #666;
+  font-size: 1.6rem;
+}
+
+.title {
+  text-transform: uppercase;
+  opacity: .8;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+
+.subtitle {
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
