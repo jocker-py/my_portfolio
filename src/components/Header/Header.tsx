@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./Header.module.scss";
-import {Endpoints} from "../../config/endpoints";
 import {
   faHouseChimney,
   faUser,
@@ -8,9 +7,9 @@ import {
   faEnvelopeOpenText, faMoon,
 
 } from "@fortawesome/free-solid-svg-icons";
-import {NavIconLink} from "../common/NavIconLink/NavIconLink";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
+import {Endpoints} from "../Router/Router";
+import {NavIconLink} from "../NavIconLink/NavIconLink";
 
 
 const Header = () => {
@@ -18,7 +17,7 @@ const Header = () => {
     <header className={s.header}>
       <div className={s.wrapper}>
         <div className={s.themeSwitcher}>
-          <FontAwesomeIcon icon={faMoon} size="xs" style={{fontSize: '28px'}}/>
+          <FontAwesomeIcon icon={faMoon} size="xs" style={{fontSize: "28px"}}/>
         </div>
         <nav className={s.nav}>
           <NavIconLink to={Endpoints.Home} title={"HOME"} icon={faHouseChimney}/>
