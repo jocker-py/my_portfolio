@@ -15,7 +15,7 @@ export const NavIconLink: FC<navIconLinkPropsType> = ({icon, title, to}) => {
     return isActive ? s.link + " " + s.active : s.link;
   };
   return <NavLink to={to} className={navLinkClass}>
-    <div className={s.title}>{title}</div>
-    <FontAwesomeIcon icon={icon} size="lg" style={{position: "relative", zIndex: "3"}}/>
+    <FontAwesomeIcon icon={icon} size="lg" className={s.icon}/>
+    <h2 className={s.title}>{title}</h2>
   </NavLink>;
 };
