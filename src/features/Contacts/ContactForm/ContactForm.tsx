@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./ContactForm.module.scss";
-import Button from "../../common/Button/Button";
 import axios, {AxiosResponse} from "axios";
 import {Form, Formik, Field, ErrorMessage, FormikHelpers} from "formik";
 import {handleValidation} from "./validation";
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons";
+import Button from "../../../components/Button/Button";
 
 export type FormValuesType = {
   name: string;
@@ -32,7 +32,7 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
       });
-      if(response.status === 200) alert("Спасибо за ваше сообщение! Скоро отвечу");
+      if(response.status === 200) alert("Thanks for your message! I will text you soon");
     } catch (error) {
       alert(`Error: ${error} `);
     } finally {

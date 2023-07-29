@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./MySkills.module.scss";
 import Skill, {SkillType} from "./Skill/Skill";
-import Title from "../../common/Title/Title";
+
 import react from "../../../assets/techs/react.svg";
 import ts from "../../../assets/techs/ts.svg";
 import redux from "../../../assets/techs/redux.svg";
@@ -26,8 +26,8 @@ import npm from "../../../assets/techs/npm.svg";
 import yarn from "../../../assets/techs/yarn.svg";
 import prettier from "../../../assets/techs/prettier.png";
 import axios from "../../../assets/techs/axios.svg";
-import List from "../../common/List/List";
 import {v1} from "uuid";
+import Title from "../../../components/Title/Title";
 
 
 const MySkills = () => {
@@ -60,7 +60,11 @@ const MySkills = () => {
   return (
     <article className={s.wrapper}>
       <Title>My Skills</Title>
-      <List className={s.list} items={techs} renderItem={(tech) => <Skill {...tech}/>}/>
+      <div className={s.list}>
+        {
+          techs.map((tech) => <Skill {...tech}/>)
+        }
+      </div>
     </article>
   );
 };

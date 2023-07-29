@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
   padding: 20px;
 }
@@ -10,7 +9,7 @@
   color: black;
 }
 
-.info {
+.infoList {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -22,9 +21,6 @@
   padding: 0 0 0 155px;
   margin: 0 auto;
   max-width: 1000px;
-}
-
-.file {
 }
 
 .item {
@@ -43,5 +39,15 @@
   font-weight: 600;
   text-align: left;
 }
+
+.links {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+
 
 

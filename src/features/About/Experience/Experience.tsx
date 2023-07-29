@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./Experience.module.scss";
-import Title from "../../common/Title/Title";
-import {Company, CompanyType} from "../../common/Company/Company";
 import {v1} from "uuid";
-import List from "../../common/List/List";
+import Title from "../../../components/Title/Title";
+import {Company, CompanyType} from "../../../components/Company/Company";
+
 
 const Experience = () => {
   const companies: Array<CompanyType> = [
@@ -29,7 +29,11 @@ const Experience = () => {
   return (
     <article className={s.wrapper}>
       <Title>EXPERIENCE</Title>
-      <List className={s.list} items={companies} renderItem={(company) => <Company {...company}/>}/>
+      <div className={s.list}>
+        {
+          companies.map((company) => <Company key={company.id}{...company}/>)
+        }
+      </div>
     </article>
   );
 };
