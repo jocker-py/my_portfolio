@@ -1,10 +1,16 @@
 import React from "react";
 import {Routes, Route} from "react-router-dom";
-import Contacts from "../Contacts/Contacts";
-import MyProjects from "../MyProjects/MyProjects";
-import Home from "../Home/Home";
-import About from "../About/About";
-import {Endpoints} from "../../config/endpoints";
+import Contacts from "../../features/Contacts/Contacts";
+import MyProjects from "../../features/MyProjects/MyProjects";
+import About from "../../features/About/About";
+import Home from "../../features/Home/Home";
+
+export enum Endpoints {
+  Contact= '/contact',
+  Portfolio= '/portfolio',
+  About= '/about',
+  Home= '/my_portfolio',
+}
 
 const Router = () => {
   return (
