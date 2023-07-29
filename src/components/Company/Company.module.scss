@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.link {
+  position: relative;
+  z-index: 2;
+}
+
+.link::after,
+.faBox::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-left: 1px solid #ddd;
+  content: "";
+  height: max-content;
+  z-index: -1;
+}
+
+.icon,
+.faIcon {
+  width: 3em;
+  height: 2em;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  object-fit: contain;
+  line-height: 1;
+  font-size: 2em;
+}
+
+.faBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  width: 50px;
+  height: 50px;
+  margin: 5px 0 5px 10px;
+  border-radius: 50%;
+  background-color: #eee;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.faIcon {
+  padding: 1em;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #ffb400;
+}
+
+.year {
+  display: inline-block;
+  padding: 1px 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: #eee;
+  opacity: .8;
+  color: #666;
+}
+
+.position {
+  margin: 7px 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.name {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: .8;
+  padding-left: 26px;
+}
+
+.description {
+  color: #666;
+}
