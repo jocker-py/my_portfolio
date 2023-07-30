@@ -1,0 +1,29 @@
+@mixin flex($d: row, $j: stretch, $a: stretch, $w: wrap, $g:normal) {
+  display: flex;
+  flex-wrap: $w;
+  flex-direction: $d;
+  align-items: $a;
+  justify-content: $j;
+  gap: $g;
+}
+
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin background($image, $position: center center,  $size: auto, $repeat: no-repeat) {
+  background-image: url($image);
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin animate ($anim, $ease: ease-in, $delay: 0s, $dur: 1s){
+  animation: $anim;
+  animation-timing-function: $ease;
+  animation-delay: $delay;
+  animation-duration: $dur;
+  animation-fill-mode: forwards;
+}
+
