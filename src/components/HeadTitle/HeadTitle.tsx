@@ -1,10 +1,10 @@
 import React, {FC} from "react";
 import s from './HeadTitle.module.scss';
 
-type HeadTitlePropsType = {
-  background: string;
-  title: string;
-  subtitle: string;
+export type HeadTitlePropsType = {
+  background?: string;
+  title?: string;
+  subtitle?: string;
 }
 
 const HeadTitle: FC<HeadTitlePropsType> = ({title, subtitle,background}) => {
