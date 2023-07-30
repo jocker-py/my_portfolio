@@ -1,0 +1,22 @@
+@import '../../../common/variables';
+
+.link {
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 4rem;
+  text-align: center;
+  transition: .3s;
+  font-size: 1.7rem;
+  margin: 0 6px;
+  border-radius: 50%;
+  color: $textColor;
+  background: $linkColor;
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+  background-color: $mainColor;
+  color: $lightColor;
+}
