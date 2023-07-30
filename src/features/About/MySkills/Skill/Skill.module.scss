@@ -1,0 +1,42 @@
+@import '../../../../common/mixins';
+@import '../../../../common/variables';
+
+.skill {
+  @include flex(column, center, center);
+  width: 150px;
+  height: 150px;
+  color: $textColor;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  margin: 15px auto;
+}
+
+.img {
+  width: 80%;
+  border-radius: 20px;
+  padding: 10%;
+  box-shadow: 0 5px 10px 3px $boxShadowColor;
+  transition: 0.3s;
+}
+
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+
+@media (max-width: $extraSmallWidth) {
+  .skill {
+    width: 100px;
+    height: 100px;
+  }
+  .imgContainer {
+    width: 70px;
+    margin: 10px auto;
+  }
+}
