@@ -1,34 +1,41 @@
-@import './src/styles/mixins';
-
-.container {
-  width: 100%;
-  height: 100vh;
-  padding: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+@import '../../common/mixins';
+@import '../../common/animation';
+@import '../../common/variables';
 
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  @include flex(column, $g: 15px);
+  @include animate(fadeIn);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.box {
+  @include flex($j: space-between, $a: flex-start);
 }
 
 .contactsList {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  @include flex(column, $g: 15px);
+  width: 60%;
 }
 
 .societiesList {
+  @include flex($g: 15px);
   width: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
 }
 
 
+@media (max-width: $mediumWidth) {
+  .box {
+    @include flex(column, center, center);
+  }
 
+  .contactsList {
+    width: 100%;
+  }
+
+  .societiesList {
+    width: 100%;
+  }
+}

@@ -1,3 +1,6 @@
+@import '../../common/variables';
+@import '../../common/mixins';
+
 .button {
   overflow: hidden;
   display: inline-block;
@@ -15,11 +18,11 @@
   position: relative;
   z-index: 1;
   padding: 16px 70px 16px 35px;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 600;
   background-color: transparent;
   outline: none;
-  border: 1px solid #ffb400;
+  border: 1px solid $mainColor;
   max-width: max-content;
 }
 
@@ -36,25 +39,25 @@
 }
 
 .button:hover:before {
-  background-color: #ffb400;
+  background-color: $mainColor;
   transform: translateX(0)
 }
-
 
 
 .text {
   position: relative;
   z-index: 2;
   transition: all .3s ease-out;
-  color: #666;
+  color: $textColor;
 }
 
 .button:hover .text {
-  color: #fff;
+  color: $lightColor;
 
 }
 
 .icon {
+  @include flex(row, center, center);
   position: absolute;
   right: -1px;
   top: -1px;
@@ -62,10 +65,7 @@
   width: 25px;
   height: 25px;
   padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  color: #fff;
+  font-size: 1.5rem;
+  color: $lightColor;
   border-radius: 50%
 }

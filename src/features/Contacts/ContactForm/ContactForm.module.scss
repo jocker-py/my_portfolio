@@ -1,15 +1,17 @@
+@import '../../../common/mixins';
+@import '../../../common/variables';
+
+
 .form {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, $g: 5px);
   gap: 5px;
   width: 100%;
   max-width: 800px;
   margin: 0 0 30px 0;
 }
 
-.wrapper {
-  display: flex;
-  gap: 30px;
+.fieldWrapperGroup {
+  @include flex($w: no-wrap, $g: 30px);
 }
 
 .fieldWrapper {
@@ -26,7 +28,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6rem;
-  color: red;
+  color: $errorColor;
 }
 
 .name, .email, .subject, .textarea {
@@ -34,13 +36,13 @@
   width: 100%;
   outline: none;
   border-radius: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid $secondColor;
   margin: 0;
   padding: 11px 26px;
   font-size: 1.3rem;
   font-family: inherit;
-  background-color: #fff;
-  color: #666;
+  background-color: transparent;
+  color: $textColor;
   transition: all .3s;
 }
 
@@ -55,10 +57,26 @@
 .email:focus,
 .subject:focus,
 .textarea:focus {
-  border: 1px solid #ffb400;
+  border: 1px solid $mainColor;
 }
 
 .textarea {
   resize: vertical;
 }
 
+
+@media (max-width: $mediumWidth) {
+.fieldWrapperGroup {
+  flex-direction: column;
+  gap: 5px;
+}
+}
+
+@media (max-width: $smallWidth) {
+  .form {
+    align-items: center;
+  }
+  .fieldWrapperGroup {
+    width: 100%;
+  }
+}

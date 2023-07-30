@@ -1,53 +1,68 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@import '../../../common/mixins';
+@import '../../../common/animation';
+@import '../../../common/variables';
+
+.container {
+  max-width: 870px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.title{
-  color: black;
+.wrapper {
+  @include flex(column, $g: 20px);
+  margin-top: 20px;
+}
+
+.title {
+  text-align: left;
 }
 
 .infoList {
+  @include flex(row, flex-start, center, wrap, 10px);
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  list-style: none;
-  padding: 0 0 0 155px;
-  margin: 0 auto;
-  max-width: 1000px;
 }
 
+
 .item {
-  width: 180px;
+  @include flex(column, $j:center, $a: flex-start);
+  width: 200px;
   opacity: .8;
   text-transform: capitalize;
-  display: block;
-  font-size: 15px;
-  line-height: 24px;
-  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
 }
 
 .details {
-  display: block;
-  text-transform:initial;
+  text-transform: initial;
   font-weight: 600;
-  text-align: left;
+
 }
 
 .links {
-  display: flex;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 100px;
+  @include flex($j: space-between, $a: center);
+  width: 100%;
 }
 
 
+
+@media (max-width: $mediumWidth) {
+  .infoList {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .links {
+    flex-direction: column-reverse;
+    gap: 20px
+  }
+}
+
+@media (max-width: $smallWidth) {
+  .codewarsImg {
+    width: 100%;
+  }
+  .title {
+    text-align: center;
+  }
+}
 
 

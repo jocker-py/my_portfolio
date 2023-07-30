@@ -1,14 +1,10 @@
+@import '../../../common/mixins';
+
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  @include flex(column, $g: 20px);
+  margin-bottom: 50px;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  @include flex(column, center, flex-start, $g: 40px);
 }

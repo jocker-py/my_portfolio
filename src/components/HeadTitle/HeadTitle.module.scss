@@ -1,3 +1,6 @@
+@import '../../common/variables';
+@import '../../common/mixins';
+
 .container {
   position: relative;
   padding: 80px 0;
@@ -13,7 +16,7 @@
 }
 
 .background {
-  font-size: 110px;
+  font-size: 11rem;
   letter-spacing: 10px;
   line-height: .7;
   font-weight: 800;
@@ -21,10 +24,10 @@
 }
 
 .title {
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: 900;
   margin: 0;
-  color: #666;
+  color: $textColor;
   white-space: nowrap;
 }
 
@@ -32,4 +35,19 @@
   color: rgba(255, 180, 0, 0.85);
   margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+.container {
+  padding: 40px 0;
+  margin-bottom: 20px;
+}
+  .background{
+    font-size: 4rem;
+  }
+  .title {
+    top: 65%;
+    font-size: 3rem;
+  }
+}
+
 

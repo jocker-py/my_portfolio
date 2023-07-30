@@ -1,8 +1,11 @@
+@import '../../common/variables';
+
 .title {
   text-align: center;
   font-weight: 600;
   padding: 5px;
   text-transform: uppercase;
-  color: #666;
+  color: $textColor;
   font-size: 2.6rem;
+  margin-bottom: 20px;
 }
