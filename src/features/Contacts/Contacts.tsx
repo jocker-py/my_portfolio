@@ -13,8 +13,7 @@ import {faTelegram} from "@fortawesome/free-brands-svg-icons/faTelegram";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons/faInstagram";
 import {faViber} from "@fortawesome/free-brands-svg-icons/faViber";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons/faEnvelope";
-import HeadTitle from "../../components/HeadTitle/HeadTitle";
-import List from "../../components/List/List";
+import Page from "../../components/Page/Page";
 
 
 const Contacts = () => {
@@ -68,14 +67,25 @@ const Contacts = () => {
     }];
 
   return (
-    <section className={s.container}>
-      <HeadTitle background={"Contacts"} title={"Get In"} subtitle={"Touch"}/>
-      <article className={s.wrapper}>
-        <List items={contacts} renderItem={(contact) => <ContactItem {...contact} />} className={s.contactsList}/>
-        <List items={societies} renderItem={(society) => <ContactLink key={society.id} {...society}/>} className={s.societiesList}/>
-      </article>
-      <ContactForm/>
-    </section>
+    <Page background={"Contacts"} title={"Get In"} subtitle={"Touch"}>
+      <div className={s.wrapper}>
+        <article className={s.box}>
+          <div className={s.contactsList}>
+            {
+              contacts.map((contact) =>
+                <ContactItem key={contact.id} {...contact} />)
+            }
+          </div>
+          <div className={s.societiesList}>
+            {
+              societies.map((society) =>
+                <ContactLink key={society.id} {...society} />)
+            }
+          </div>
+        </article>
+        <ContactForm/>
+      </div>
+    </Page>
   );
 };
 
